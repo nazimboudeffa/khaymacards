@@ -1,0 +1,29 @@
+{
+  "name": "khaymacards",
+  "version": "1.0.0",
+  "description": "Praying cards to share",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nazimboudeffa/khaymacards.git"
+  },
+  "keywords": [
+    "Phaser",
+    "Node.js"
+  ],
+  "author": "Jerome Renaux",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nazimboudeffa/khaymacards/issues"
+  },
+  "homepage": "https://github.com/nazimboudeffa/khaymacards#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {}
+}
