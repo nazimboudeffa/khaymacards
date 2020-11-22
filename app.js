@@ -1,6 +1,6 @@
 const express = require('express');
 const ejs = require('ejs');
-const quran = require('./doaa.json');
+const doaas = require('./public/json/doaas.json');
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -11,11 +11,12 @@ app.get('/',function(req,res){
   res.render('index');
 });
 
-app.get('/:doaa',function(req,res){
-  if (req.params.doaa == "quran"){
-    res.render('doaa');
-    console.log(quran);
-  }
+app.get('/:ref',function(req,res){
+  res.render('cards', {cards : doaas, reference : req.params.ref});
+});
+
+app.get('/quran/:doaa',function(req,res){
+  res.render('card', {cards : doaas, card : req.params.doaa});
 });
 
 let port = process.env.PORT || 3000;
